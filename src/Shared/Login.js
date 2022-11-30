@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
+import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../context/AuthContext';
 
@@ -36,9 +36,10 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        // toast.success('login Successfully', {
-        //     theme: "colored",
-        // });
+        toast.success('login Successfully', {
+            theme: "colored",
+        });
+        navigate(from, { replace: true})
         
         form.reset();
 

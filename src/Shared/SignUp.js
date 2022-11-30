@@ -3,7 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-
+import toast from 'react-hot-toast';
 
 
 
@@ -30,6 +30,9 @@ const SignUp = () => {
             const user = result.user;
             console.log(user);
             setError(error.message);
+            toast.success('login Successfully', {
+                theme: "colored",
+            });
             navigate(from, { replace: true});
         })
             .catch(err => {
