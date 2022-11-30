@@ -16,8 +16,10 @@ const RgbToHex = () => {
 
                     For example, the hexadecimal code for pure white is #FFFFFF, and the hexadecimal code for pure black is #000000.</p>
 
-
-                <p>Convert HEX TO RGB coming soon</p>
+                <br />
+                <div>
+                    <p>Convert HEX TO RGB coming soon......</p>
+                </div>
             </div>
         </div>
     );
