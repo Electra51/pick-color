@@ -1,16 +1,18 @@
 import React from 'react';
 import Banner from './Banner';
-
-import PopularColor from './PopularColor';
+import LastSection from './LastSection';
 import SecondSection from './SecondSection';
+import ThirdSection from './ThirdSection';
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-           <SecondSection></SecondSection>
-            <PopularColor></PopularColor>
+            <SecondSection></SecondSection>
+            <ThirdSection></ThirdSection>
+            <LastSection></LastSection>
+            
         </div>
     );
 };
