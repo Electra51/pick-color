@@ -1,16 +1,16 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Footer from '../Shared/Footer';
-import Navbar from '../Shared/Navbar';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Footer from "../Shared/Footer";
+import Navbar from "../Shared/Navbar";
 
 const Main = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
 };
 
 export default Main;
