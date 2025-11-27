@@ -1,20 +1,18 @@
-import React from 'react';
-import Banner from './Banner';
-import LastSection from './LastSection';
-import SecondSection from './SecondSection';
-import ThirdSection from './ThirdSection';
-
+import React from "react";
+import Banner from "./Banner";
+import SecondSection from "./SecondSection";
+import SocialShareBanner from "./SocialShareBanner";
+import ColorTheorySection from "./ColorTheorySection";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner></Banner>
-            <SecondSection></SecondSection>
-            <ThirdSection></ThirdSection>
-            <LastSection></LastSection>
-            
-        </div>
-    );
+  return (
+    <div>
+      <Banner />
+      <SecondSection />
+      <ColorTheorySection />
+      <SocialShareBanner />
+    </div>
+  );
 };
 
 export default Home;
