@@ -33,7 +33,7 @@ const SocialShareBanner = () => {
   ];
 
   return (
-    <div className="my-16 mx-auto max-w-7xl px-6">
+    <div className="my-32 mx-auto max-w-7xl px-6">
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#3537586f] via-[#293445a8] to-[#313F53] shadow-2xl">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>
 

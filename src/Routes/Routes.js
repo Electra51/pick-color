@@ -1,3 +1,4 @@
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Connect from "../Pages/Connect/Connect";
 import Home from "../Pages/HomePage/Home";
@@ -7,43 +8,27 @@ import Login from "../Shared/Login";
 import SignUp from "../Shared/SignUp";
 import PrivateRoute from "./PrivateRoutes";
 
-const { createBrowserRouter } = require("react-router-dom");
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main></Main>,
-    errorElement: <ErrorPage></ErrorPage>,
+    element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
+      { path: "/", element: <Home /> },
+      { path: "/home", element: <Home /> },
+      { path: "/connect", element: <Connect /> },
       {
-        path: '/',
-        element: <Home></Home>
+        path: "/convert",
+        element: (
+          <PrivateRoute>
+            <RgbToHex />
+          </PrivateRoute>
+        ),
       },
-      {
-        path: '/home',
-        element: <Home></Home>
-      },
-      {
-        path: '/connect',
-        element: <Connect></Connect>
-      },
-      {
-        path: '/convert',
-        element: <PrivateRoute><RgbToHex></RgbToHex></PrivateRoute>
-      },
-
-      {
-        path: '/login',
-        element: <Login></Login>
-      },
-
-      {
-        path: '/signup',
-        element: <SignUp></SignUp>
-      }
-
-    ]
+    ],
   },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <SignUp /> },
 ]);
 
 export default router;

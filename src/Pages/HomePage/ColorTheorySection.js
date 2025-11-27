@@ -26,7 +26,7 @@ const ColorTheorySection = () => {
   ];
 
   return (
-    <div className="my-20 max-w-7xl mx-auto px-6">
+    <div className="my-32 max-w-7xl mx-auto px-6">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <img src={img} alt="" className="border rounded-md" />
 
